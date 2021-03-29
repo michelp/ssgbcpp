@@ -1,6 +1,8 @@
 #include <GraphBLAS.hpp>
 #include <cassert>
 
+using namespace ssgbcpp;
+
 void test_init () {
     Matrix_FP64 A;
     assert (A.nvals () == 0);
