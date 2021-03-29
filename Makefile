@@ -1,2 +1,2 @@
 test :
-		g++-8 -O3 test.cpp -I. -lgraphblas -o test && ./test && rm test
+		g++-8 -O3 test.cpp -Iinclude -lgraphblas -o test && ./test && rm test

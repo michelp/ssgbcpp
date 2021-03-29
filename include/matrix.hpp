@@ -1,6 +1,3 @@
-#define CCAT2(x, y) x ## y
-#define CCAT(x, y) CCAT2(x, y)
-#define FN(x) CCAT(x, N)
 
 #define _TRY(GrB_method)                                        \
     { const char* error; GrB_Info info = GrB_method ;           \
@@ -11,19 +8,18 @@
         }                                                       \
     }
 
-
 namespace ssgbcpp {
     class FN(Matrix_) {
     private:
         GrB_Matrix A;
     public:
         FN(Matrix_) (GrB_Index nrows, GrB_Index ncols) {
-            _TRY(GrB_Matrix_new(&A, FN(GrB_),
+            _TRY(GrB_Matrix_new(&A, FN(P),
                                 nrows, ncols));
         }
         
         FN(Matrix_) () {
-            _TRY(GrB_Matrix_new(&A, FN(GrB_),
+            _TRY(GrB_Matrix_new(&A, FN(P),
                                 GxB_INDEX_MAX,
                                 GxB_INDEX_MAX));
         }
@@ -51,7 +47,7 @@ namespace ssgbcpp {
         }
         
         void setElement(T x, GrB_Index i, GrB_Index j) {
-            _TRY(FN(GrB_Matrix_setElement_)(A, x, i, j));
+            _TRY(PN(Matrix_setElement_)(A, x, i, j));
         }
         
         void print() {
@@ -67,3 +63,4 @@ namespace ssgbcpp {
 
 #undef T
 #undef N
+#undef _TRY
