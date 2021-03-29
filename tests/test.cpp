@@ -7,10 +7,6 @@ using namespace ssgbcpp;
 
 int main () {
     GrB_init (GrB_NONBLOCKING);
-    
-    test_init  ();
-    test_print ();
-    test_Matrix_setElement ();
-    
+    test_FP64();
     GrB_finalize ();
 }
