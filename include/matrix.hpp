@@ -60,7 +60,3 @@ namespace ssgbcpp {
         
     };
 }
-
-#undef T
-#undef N
-#undef _TRY

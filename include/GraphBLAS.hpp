@@ -1,3 +1,5 @@
+#pragma once
+
 extern "C" {
 #include <GraphBLAS.h>
 }
@@ -12,53 +14,88 @@ extern "C" {
 #define N BOOL
 #define T bool
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
     
 #define N INT64
 #define T int64_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N INT32
 #define T int32_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N INT16
 #define T int16_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N INT8
 #define T int8_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N UINT64
 #define T uint64_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N UINT32
 #define T uint32_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N UINT16
 #define T uint16_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N UINT8
 #define T uint8_t
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N FP64
 #define T double
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N FP32
 #define T float
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #undef P
 #define P GxB_
 #define N FC64
 #define T std::complex<double>
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
 
 #define N FC32
 #define T std::complex<float>
 #include "matrix.hpp"
+#include "vector.hpp"
+#include "scalar.hpp"
+
+#undef T
+#undef N
+#undef P
+#undef _TRY
+#undef CCAT2
+#undef CCAT
+#undef FN
+#undef PN
