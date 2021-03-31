@@ -1,3 +1,3 @@
 
+#undef C
 #undef T
-#undef N

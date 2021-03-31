@@ -1,3 +1,0 @@
-
-#undef T
-#undef N
