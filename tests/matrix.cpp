@@ -23,8 +23,9 @@ void FN(test_print_) () {
 
 void FN(test_Matrix_setElement_) () {
     Matrix<C> A(T);
-    A.setElement(ANSWER, 1, 2);
+    A.setElement (ANSWER, 1, 2);
     assert (A.nvals () == 1);
+    A.print ();
     }
 
 void FN(test_) () {
